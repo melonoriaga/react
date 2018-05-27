@@ -1,3 +1,41 @@
 .Volume{
     color: white; 
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    transition: .3s;
+    cursor: pointer;
+    outline: 0;    
+}
+.box_range{
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 58px;
+    left: -35px;
+    min-width: 100px;
+    padding: 10px 3px;
+    display: none;
+}
+.Volume:hover .box_range{
+    display: block;
+}
+.box_range:hover{
+    display: block;
+}
+.Mute{
+    position: relative;
+    overflow: hidden;
+}
+.Mute .box_svg{
+    opacity: .5;
+}
+.Mute span{
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: 45%;
+    right: 45%;
+    transform: rotate(55deg);
+    background: white; 
 }
