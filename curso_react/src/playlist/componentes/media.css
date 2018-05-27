@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400');
+/* font-family: 'IBM Plex Mono', monospace; */
+.playlist_box{
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+.Media{
+    cursor: pointer;
+    margin: 0 15px 15px 0;
+    width: 260px;
+    vertical-align: top;
+    border: 1px solid #383838;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: .3s;
+    overflow: hidden;
+}
+.Media_image{
+    overflow: hidden;
+}
+.Media_box_info{
+    background: #333333;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: stretch;
+    min-height: 130px;
+    transition: .5s;    
+}
+.Media:hover .Media_box_info{
+    background: #313131;    
+}
+.Media_title{
+    font-size: 13px;
+    color: #535e5a;
+}
+.Media_descrip{
+    font-size: .7em;
+    color: #6f7b77;
+}
+.boton_ok{
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 150;
+    overflow: hidden;
+    transition: .3s;
+    text-decoration: none;
+    background: linear-gradient(to right, #C7F464 , #c5ff44);
+    color: #414830;
+    font-size: 15px;    
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+.boton_ok span{
+    z-index: 151;
+    position: absolute;
+    top: -120px;
+    bottom: -120px;
+    left: 45%;  
+    right: 45%; 
+    background: rgba(255,255,255,.5);
+    transform: rotate(-45deg) translateX(-100px);
+    transition: 1s;    
+}
+.boton_ok.light span{
+    background: rgba(74,192,206,.5);
+}
+.boton_ok:hover span{
+    transform: rotate(-45deg) translateX(150px);
+    left: 30%;  
+    right: 30%; 
+}
+.boton_ok:active{
+    transform: scale(.9);
+}
+.boton_ok i{
+    font-size: 20px;
+    margin: 0 7px 0 0;
+    z-index: 152;    
+}
+.boton_ok:active, .boton_ok:focus, .boton_ok:hover, .boton_ok::before, .boton_ok::after{
+    color: #666a6b;
+    border: none;
+    box-shadow: none;
+}
+.contenedor_botones{
+    display: flex;
+    flex-direction: row !important;
+    margin: 15px auto;
+    max-width: 50%;
+    justify-content: center;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 1px 2px 4px rgba(45,45,45,.3);
+
+}
+.contenedor_botones .box_svg{
+    margin: 0 15px;
+    padding: 10px;
+    background: #292929;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.contenedor_botones .box_svg svg{
+    transition: .3s;
+}
+.contenedor_botones .box_svg:hover svg{
+    transform: scale(1.2);
+}

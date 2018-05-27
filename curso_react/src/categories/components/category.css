@@ -1,0 +1,21 @@
+.playlist_container{
+    margin: 25px 15px;
+    padding: 15px;
+    background: #313131;    
+    box-shadow: 1px 3px 5px rgba(0,0,0,.2);
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: .3s;
+}
+.playlist_container p.subtitle{
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    color: #7a7474;
+    font-weight: 400;
+}
+.playlist_container h2.title{
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #b5babe;
+    font-weight: 400;
+}

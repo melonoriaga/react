@@ -1,0 +1,21 @@
+.related_box{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    width: 250px;
+    padding: 25px 15px;
+}
+.logo_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #303030;
+    padding: 15px 0;
+    position: sticky;    
+}
+.logo_box img{
+    width: 150px;
+}

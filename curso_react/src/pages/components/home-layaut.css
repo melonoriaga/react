@@ -1,0 +1,43 @@
+body{
+    background: #292929;
+ }
+ .barra_scrool::-webkit-scrollbar-track{
+    background-color: #3c3c3c;
+ }
+ .barra_scrool::-webkit-scrollbar-track:hover{
+    background-color: #3c3c3c;
+    border-radius: 15px;
+ }
+ .barra_scrool::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+    background-color: #3b3b49;
+ }
+ .barra_scrool::-webkit-scrollbar:hover{
+    width: 8px;
+    height: 8px;
+ }
+ .barra_scrool::-webkit-scrollbar-thumb{
+    background-color: #525252;
+    border-radius: 15px;
+    margin: 5px 0;
+ }
+ .barra_scrool:hover::-webkit-scrollbar-thumb{
+    background-color: #668297;
+ }
+ .barra_scrool::-webkit-scrollbar-thumb:hover {
+    background: #828282;
+    width: 10px;
+    height: 10px;
+}
+.barra_scrool::-webkit-scrollbar-thumb:active {
+    background: #54738f
+}
+
+.container_content{
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}

@@ -1,0 +1,36 @@
+.Form{
+    margin: 25px 0;
+    padding: 15px 0 0 15px;
+}
+.Form input {
+    background: #454545;
+    border: none;
+    box-shadow: none;
+    height: 35px;
+    min-width: 350px;
+    box-shadow: 1px 2px 2px rgba(0,0,0,.4);
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-family: 'IBM Plex Mono', monospace;    
+    color: white;    
+}
+.Form input:focus{
+    box-shadow: none;
+    border: none;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #656565;
+ }
+ 
+ .form-control:-moz-placeholder { /* Firefox 18- */
+    color: #656565;  
+ }
+ 
+ .form-control::-moz-placeholder {  /* Firefox 19+ */
+    color: #656565;  
+ }
+ 
+ .form-control:-ms-input-placeholder {  
+    color: #656565;  
+ }

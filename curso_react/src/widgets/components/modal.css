@@ -1,0 +1,15 @@
+.Modal{
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    top: 30%;
+    bottom: 30%;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 999;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;    
+}

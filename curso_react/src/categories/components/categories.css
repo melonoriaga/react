@@ -1,0 +1,4 @@
+.container_categories{
+    clear: both;
+    width: calc(100% - 260px);
+}
