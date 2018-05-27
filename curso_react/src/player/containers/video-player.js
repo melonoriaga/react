@@ -76,9 +76,25 @@ class VideoPlayer extends Component {
         });
     }
 
+    setRef = element => {
+        this.player = element;
+    }
+
+    handleFullScreenClick = (event) => {
+        if (!document.webkitIsFullScreen) {
+            this.player.webkitRequestFullScreen();
+            console.log('estoy en full');                        
+        }  else {
+            document.webkitExitFullscreen();
+            console.log('NO estoy en full');            
+        }
+    }
+
     render () {
         return (
-            <VideoPlayerLayout>
+            <VideoPlayerLayout
+                setRef={this.setRef}
+            >
                 <Title
                     title="titulo del video harcode"
                 />
@@ -107,7 +123,7 @@ class VideoPlayer extends Component {
                     />
 
                     <FullScreen
-                    
+                        handleFullScreenClick={this.handleFullScreenClick}
                     />
                 </Controls>
 
