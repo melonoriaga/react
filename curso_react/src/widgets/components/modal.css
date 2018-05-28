@@ -1,15 +1,49 @@
 .Modal{
     position: fixed;
     background: rgba(0,0,0,.7);
-    top: 30%;
-    bottom: 30%;
-    right: 0;
-    left: 0;
+    top: 25%;
+    width: 500px;
+    margin: 0 auto;
+    left: calc(50% - 250px);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 999;
     color: white;
-    font-family: 'IBM Plex Mono', monospace;    
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 20px;
+}
+.Modal-container{
+    background: #000;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    z-index: 150;
+}
+
+.closed{
+    z-index: 151;    
+    outline: 0;
+    cursor: pointer;
+    background: rgba(45,45,45,1);
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;    
+}
+.closed::after{
+    content: "X";
 }

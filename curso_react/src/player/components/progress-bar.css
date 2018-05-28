@@ -1,7 +1,8 @@
 .Progess-Bar {
     color: white;
     margin: 0 10px;
-    max-width: 90px;
+    /* max-width: 90px; */
+    width: 95%;
 }
 input[type=range] {
     -webkit-appearance: none;

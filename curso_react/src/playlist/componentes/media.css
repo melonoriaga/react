@@ -66,6 +66,7 @@
     font-weight: 700;
     cursor: pointer;
     border: none;
+    outline: 0;
 }
 .boton_ok span{
     z-index: 151;
