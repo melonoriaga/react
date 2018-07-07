@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="dist/css/home.d63ab6160be10c717477.css"> -->
+    <title>Redux</title>
+</head>
+<body>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400);
+        body{
+            background: #292929;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        form input{
+            height: 35px;
+            outline: none;
+            border-radius: 25px;
+            min-width: 250px;
+            border: none;
+            padding: 0 25px;
+            margin: 25px 0;
+        }
+        .store{
+            font-family: 'IBM Plex Mono', monospace;
+            color: white;
+            margin: 25px;
+            /* text-align: center; */
+            max-width: 80%;
+            font-weight: 400;
+            font-size: 20px;
+        }
+    </style>
+    <div class="store">
+        STORE:
+        <br>
+        Es el centro y la verdad de todo, con métodos para actualizar, obtener y escuchar datos.
+        <br>
+        <ol>
+            <li>Contiene el estado de la aplicación</li>
+            <li>Puedes acceder al estado con el metodo getState()</li>
+            <li>Puedes actualizar el estado con el método  dispatch()</li>
+            <li>Escucha cambios en el método subscribe(listener)</li>
+            <li>Dejas de escuchar cambios retornando la función del método subscribe(listener)</li>
+        </ol>
+    </div>
+    <form id="form">
+        <input type="text" name="title" id="" placeholder="Nombre de la cancion">
+    </form>
+    <!-- <div id="home_container"></div> -->
+    <!-- <div id="modal_container"></div> -->
+    <script src="http://localhost:9000/js/redux.js"></script>
+    <!-- <script src="dist/js/home.d63ab6160be10c717477.js"></script> -->
+    <!-- <script src="http://localhost:9000/js/platzi-video.js"></script> -->
+</body>
+</html>   
