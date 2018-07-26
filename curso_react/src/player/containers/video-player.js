@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import VideoPlayerLayout    from '../components/video-player-layout';
-import Video                from '../components/video';
-import Title                from '../components/title';
-import PlayPause            from '../components/play-pause';
-import Timer                from '../components/timer';
-import Controls             from '../components/video-player-controls';
-import ProgressBar          from '../components/progress-bar';
-import Spinner              from '../components/spinner';
-import Volume               from '../components/volume';
-import FullScreen           from '../components/full-screen';
+import VideoPlayerLayout from '../components/video-player-layout';
+import Video from '../components/video';
+import Title from '../components/title';
+import PlayPause from '../components/play-pause';
+import Timer from '../components/timer';
+import Controls from '../components/video-player-controls';
+import ProgressBar from '../components/progress-bar';
+import Spinner from '../components/spinner';
+import Volume from '../components/volume';
+import FullScreen from '../components/full-screen';
+import { connect } from 'react-redux';
 
 class VideoPlayer extends Component {
     state = {
@@ -96,7 +97,7 @@ class VideoPlayer extends Component {
                 setRef={this.setRef}
             >
                 <Title
-                    title={this.props.title}
+                    title={this.props.media.get('title')}
                 />
 
                 <Controls>
@@ -136,11 +137,19 @@ class VideoPlayer extends Component {
                     pause={this.state.pause}
                     handleLoadedMetadata={this.handleLoadedMetadata}
                     handleTimeUpdate={this.handleTimeUpdate}
-                    src={this.props.src}
+                    src={this.props.media.get('src')}
                 />
             </VideoPlayerLayout>
         )
     }
 }
 
-export default VideoPlayer;
+function mapStateToProps (state, props) {
+
+    return {
+        media: state.getIn(['data', 'entities', 'media', props.id]),
+    }
+
+}
+
+export default connect(mapStateToProps)(VideoPlayer);
