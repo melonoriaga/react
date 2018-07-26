@@ -1,6 +1,13 @@
 import schema from '../schemas/index';
+import schemas from '../schemas/index.js';
 
-function data(state = {  }, action) {
+const initialState = {
+    entities  : schemas.entities,
+    categories: schemas.result.categories,
+    search    : [],
+}
+
+function data(state = initialState, action) {
     switch (action.type) {
 
         case 'SEARCH_VIDEO': {
