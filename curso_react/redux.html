@@ -31,10 +31,21 @@
             font-family: 'IBM Plex Mono', monospace;
             color: white;
             margin: 25px;
-            /* text-align: center; */
             max-width: 80%;
             font-weight: 400;
             font-size: 20px;
+        }
+        .playlist p {
+            color: white;
+            border: 1px solid rgba(255,255,255,.1);
+            padding: 15px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: .3s;
+            text-align: center;
+        }
+        .playlist p:hover{
+            background: rgba(255,255,255,.1);
         }
     </style>
     <div class="store">
@@ -53,6 +64,9 @@
     <form id="form">
         <input type="text" name="title" id="" placeholder="Nombre de la cancion">
     </form>
+    <div id="playlist" class="playlist">
+
+    </div>
     <!-- <div id="home_container"></div> -->
     <!-- <div id="modal_container"></div> -->
     <script src="http://localhost:9000/js/redux.js"></script>
