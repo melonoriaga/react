@@ -145,11 +145,9 @@ class VideoPlayer extends Component {
 }
 
 function mapStateToProps (state, props) {
-
     return {
         media: state.getIn(['data', 'entities', 'media', props.id]),
     }
-
 }
 
 export default connect(mapStateToProps)(VideoPlayer);

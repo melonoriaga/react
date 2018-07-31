@@ -8,23 +8,14 @@ import HandleError from '../../error/containers/handle-error';
 import VideoPlayer from '../../player/containers/video-player';
 import { connect } from 'react-redux';
 import { List as list } from 'immutable';
+import * as actions from '../../action/index';
+import{ bindActionCreators } from 'redux';
 class Home extends Component {
-    handleOpenModal = (id) => {
-        this.props.dispatch({
-            type: 'OPEN_MODAL',
-            payload: {
-                mediaId: id,
-            }
-        })
-    }
+    handleOpenModal = (id) =>  this.props.actions.openModal(id);
     
-    handleCloseModal = (event) => {
-        this.props.dispatch({
-            type: 'CLOSE_MODAL',
-        })
-    }
+    handleCloseModal = () => this.props.actions.closeModal();
+
     render (){
-        console.log(this.props.modal.get('mediaId'));
         return (
             <HandleError>
 
@@ -45,8 +36,6 @@ class Home extends Component {
                                 <VideoPlayer
                                     autoplay
                                     id={this.props.modal.get('mediaId')}
-                                    // src={this.state.media.src}
-                                    // title={this.state.media.title}
                                 />
                             </Modal>
                         </ModalContainer>
@@ -81,5 +70,10 @@ function mapStateToProps (state, props) {
     }
 }
 
-export default connect(mapStateToProps)(Home);
-// export default Home;
+function mapDispatchToProps (dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
